@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style>
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+  }
+  
+  @keyframes rotate {
+    100% {
+      background-position: 15% 100%;
+    }
+  }
+  body {
+    display: grid;
+    /* place-items: center; */
+    margin: 0;
+    padding: 0 24px;
+    background-image: url("https://raw.githubusercontent.com/zouraiz523/Login-Form/c8614629b2ea918cc971890e1279566672ac67dc/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Euclid Circular A";
+    color: #000;
+    animation: rotate 2s infinite alternate linear;
+  }
+  
+  .login-box { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    padding: 60px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.1);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 2em;
+    padding: 0;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  
+/* navigation */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+nav{
+  position: relative;
+  width: 760px;
+  height: 50px;
+  background: #083a7f;
+  display: flex;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a{
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 23px;
+  z-index: 1;
+}
+
+nav label {
+  position: absolute;
+  top: 0;
+  left:640px;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient(45deg,#114389,rgb(10, 22, 75));
+  border-radius: 8px;
+  transition: .5s;
+  }
+nav a:nth-child(1):hover~label{
+  left:0;
+}
+nav a:nth-child(2):hover~label{
+  left:110px;
+}
+nav a:nth-child(3):hover~label{
+  left: 220px;
+  width: 110px;
+}
+nav a:nth-child(4):hover~label{
+  left: 330px;
+  width: 100px;
+}
+nav a:nth-child(5):hover~label{
+  left: 440px;
+  width: 80px;
+}
+nav a:nth-child(6):hover~label{
+  left: 530px;
+  width: 100px;
+}
+nav a:nth-child(7):hover~label{
+  left: 640px;
+  width: 120px;
+}
+.navigation
+{
+margin-top: 30px;
+
+}
+/* LOGO */
+
+.brand {
+  
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: -65px auto;
+  margin-left: 497px;
+  
+}
+.brand:before {
+  
+  background-size: 100% 100%;
+  content: "SB";
+  line-height: 205px;
+  color: #93b7ea;
+  font-size: 20px;
+  font-family: "HEAVITAS", "Helvetica Rounded", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+  
+  z-index: 99999 !important;
+}
+
+.logo{
+  animation: 5s linear infinite;
+  animation-name: rotate-0;
+  animation-delay: 0s;
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+  
+}
+.navigation
+{
+  display: flex;
+}
+
+svg path{
+  fill:none;
+  stroke-width:2;
+  top:0;
+  left:0;
+  /*mix-blend-mode: multiply;*/
+  transform-origin: 50% 50%;
+  transform: rotate(0deg) ;
+  animation: 4s linear infinite;
+}
+
+.logo svg path:nth-child(1) {
+  opacity: 1;
+  animation-name: rotate-1;
+  animation-delay: .5s;
+}
+.logo svg path:nth-child(2) {
+  opacity: .5;
+  animation-name: rotate-2;
+  animation-delay: .6s;
+}
+.logo svg path:nth-child(3) {
+  opacity: .8;
+  animation-name: rotate-3;
+  animation-delay: .7s;
+}
+
+
+@keyframes scale-1 {
+  0%{
+    transform: scale(1);
+  }50% {
+    transform: scale(.9);
+  }100% {
+    transform: scale(1);
+  } 
+}
+
+@keyframes rotate-0 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+} 
+
+@keyframes rotate-1 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-2 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes rotate-3 {
+  from { transform: rotate(0deg); }
+    to { transform: rotate(0deg); }
+}
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  z-index: -1;
+}
+
+</style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div class="navigation inputBox">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="error.html">Education</a>
+        <a href="error.html">Projects</a>
+        <a href="error.html">Skills</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <label></label>
+    </nav>
+    <div class="brand">
+      <div class="logo">
+        <svg width="200px" height="200px" >
+              <path stroke="#93b7ea" stroke-width="0" fill="#93b7ea" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+              s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+              C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+              S144.229,62.683,140.773,59.227z"/>
+        
+              <path stroke="#93b7ea" stroke-width="0" fill="#93b7ea" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+              s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+              C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+              S144.229,62.683,140.773,59.227z"/>
+        
+              <path stroke="#93b7ea" stroke-width="0" fill="#93b7ea" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+              s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+              C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+              S144.229,62.683,140.773,59.227z"/>
+        </svg>
+      </div>
+      </div>
+      </div>
+    <div class="login-box">
+
+    </div>
+    <script>
+      const c = document.getElementById("canvas");
+  const ctx = c.getContext("2d");
+  
+  let cwidth, cheight;
+  const dots = [];
+  const RACIO_DOTS = 0.15;
+  const dotCounter = window.innerHeight < window.innerWidth ? window.innerHeight * RACIO_DOTS : window.innerWidth * RACIO_DOTS; ;
+  const maxVal = 1200;
+  
+  window.onresize = function() { reset(); }
+  reset();
+  function reset() {
+  
+    cwidth = window.innerWidth;
+    cheight = window.innerHeight;
+    c.width = cwidth;
+    c.height = cheight;
+  
+    const dotCounter = window.innerHeight < window.innerWidth ? window.innerHeight * RACIO_DOTS : window.innerWidth * RACIO_DOTS; ;
+    dots.length = 0;
+    while (dots.length < dotCounter) { newDot(true); } 
+  
+  }
+  
+  function newDot(start=false) {
+    
+    const dot = {};
+    dot.grow = true;
+    dot.valMax = Math.floor(Math.random() * 200);
+    dot.val = start ? Math.floor(Math.random() * dot.valMax) : 0;
+    dot.x = Math.round(Math.random() * cwidth);
+    dot.y = Math.round(Math.random() * cheight);
+    dot.xoff = (Math.random() - 0.5) * 3;
+    dot.yoff = (Math.random() - 0.5) * 3;
+      
+    dots.push(dot);
+  }
+  
+  Run();
+  function Run() {
+        
+
+    ctx.fillRect(0, 0, cwidth, cheight);
+  
+    if (dots.length < dotCounter) { newDot(); } 
+    
+    for (let ix = 0 ; ix < dots.length ; ix++) {
+      
+      let dot = dots[ix];
+  
+      dot.x += dot.xoff;
+      dot.y += dot.yoff;
+      
+      if (!dot.grow || (dot.x < 0) || (dot.x > cwidth) || (dot.y < 0) || (dot.y > cheight)) {
+  
+        if (dot.val > 0) {
+          dot.val -= 1;
+        } else {
+          dots.splice(ix, 1);
+          continue;
+        }
+  
+      } else if (dot.val < dot.valMax) {
+        dot.val += 1;
+      } else {
+        dot.grow = false;
+      }
+  
+      for (let jx = ix+1 ; jx < dots.length ; jx++) {
+  
+        let jdot = dots[jx];
+        let dist = Math.sqrt(Math.pow(Math.abs(dot.x - jdot.x), 2) + Math.pow(Math.abs(dot.y - jdot.y), 2));
+        
+        if (dist < 150) {
+          
+          const linclr = (1 - (dist/150)) * (dot.val / dot.valMax) * (jdot.val / jdot.valMax);
+          
+          ctx.beginPath();
+          ctx.moveTo(dot.x, dot.y);
+          ctx.lineTo(jdot.x, jdot.y);
+          ctx.strokeStyle = 'hsla(230 100% 80% / ' + linclr + ')';
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(Run);
+  }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,185 @@
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+nav{
+  position: relative;
+  width: 760px;
+  height: 50px;
+  background: #083a7f;
+  display: flex;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a{
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 23px;
+  z-index: 1;
+}
+
+nav label {
+position: absolute;
+top: 0;
+left: 0;
+width: 95px;
+height: 100%;
+background: linear-gradient(45deg,#114389,rgb(10, 22, 75));
+border-radius: 8px;
+transition: .5s;
+}
+nav a:nth-child(1):hover~label{
+  left:0;
+}
+nav a:nth-child(2):hover~label{
+  left:110px;
+}
+nav a:nth-child(3):hover~label{
+  left: 210px;
+  width: 100px;
+}
+nav a:nth-child(4):hover~label{
+  left: 330px;
+  width: 100px;
+}
+nav a:nth-child(5):hover~label{
+  left: 440px;
+  width: 80px;
+}
+nav a:nth-child(6):hover~label{
+  left: 530px;
+  width: 100px;
+}
+nav a:nth-child(7):hover~label{
+  left: 640px;
+  width: 120px;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  padding-left: 8px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  background: #ffffff;
+  color: #000000;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -30px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+.wrapper .Gmail:hover,
+.wrapper .Gmail:hover .tooltip,
+.wrapper .Gmail:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+
+
+

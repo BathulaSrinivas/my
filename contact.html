@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRINIVAS BATHULA</title>
+    <link href="assets\css\aboutstyle.css" rel="stylesheet">
+    <script src="assets/js/typed.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+nav label {
+  left:640px !important;
+  width: 120px !important;
+  }
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: clamp(100px, 90%, 1000px);
+  margin: 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+
+.contact-links {
+  background-color: #1f2e43;
+  background:
+    radial-gradient(
+      circle at 55% 92%, #426691 0 12%, transparent 12.2%
+    ), 
+    radial-gradient(
+      circle at 94% 72%, #426691 0 10%, transparent 10.2%
+    ), 
+    radial-gradient(
+      circle at 20% max(78%, 350px), #263a53 0 7%, transparent 7.2%
+    ), 
+    radial-gradient(
+      circle at 0% 0%, #263a53 0 40%, transparent 40.2%
+    ), 
+    #1f2e43;
+  border-radius: 10px 0 0 10px;
+}
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+}
+
+img {
+  width: 45px;
+  height: 45px;
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+img:active {
+  transform: scale(1.1, 1.1);
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #222)
+    sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+}
+
+label, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #114389;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
+  
+  .links {
+    padding-top: 30px;
+  }
+  
+  img {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+nav{
+  position: relative;
+  width: 760px;
+  height: 50px;
+  background: #083a7f;
+  display: flex;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a{
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 23px;
+  z-index: 1;
+}
+
+nav label {
+position: absolute;
+top: 0;
+left: 0;
+width: 95px;
+height: 100%;
+background: linear-gradient(45deg,#114389,rgb(10, 22, 75));
+border-radius: 8px;
+transition: .5s;
+}
+nav a:nth-child(1):hover~label{
+  left:0;
+}
+nav a:nth-child(2):hover~label{
+  left:110px;
+}
+nav a:nth-child(3):hover~label{
+  left: 210px;
+  width: 100px;
+}
+nav a:nth-child(4):hover~label{
+  left: 330px;
+  width: 100px;
+}
+nav a:nth-child(5):hover~label{
+  left: 440px;
+  width: 80px;
+}
+nav a:nth-child(6):hover~label{
+  left: 530px;
+  width: 100px;
+}
+nav a:nth-child(7):hover~label{
+  left: 640px;
+  width: 120px;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  padding-left: 8px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  background: #ffffff;
+  color: #000000;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -30px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+.wrapper .Gmail:hover,
+.wrapper .Gmail:hover .tooltip,
+.wrapper .Gmail:hover .tooltip::before {
+  background: #114389;
+  color: #ffffff;
+}
+    </style>
+  </head>
+  <body>
+    <div class="navigation inputBox">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="proj.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <label></label>
+    </nav>
+    <div class="brand">
+      <div class="logo">
+        <svg width="200px" height="200px" >
+              <path stroke="#93b7ea" stroke-width="0" fill="#93b7ea" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+              s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+              C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+              S144.229,62.683,140.773,59.227z"/>
+        
+              <path stroke="#93b7ea" stroke-width="0" fill="#93b7ea" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+              s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+              C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+              S144.229,62.683,140.773,59.227z"/>
+        
+              <path stroke="#93b7ea" stroke-width="0" fill="#93b7ea" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+              s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+              C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+              S144.229,62.683,140.773,59.227z"/>
+        </svg>
+      </div>
+      </div>
+      </div>
+
+      <section id="contact">
+        <div class="contact-box">
+          <div class="contact-links">
+            <h2>CONTACT</h2>
+            <div class="links">
+              <ul class="wrapper">
+                <li class="icon facebook">
+                  <a class="tooltip">Facebook</a>
+                  <a><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="icon linkedin">
+                  <a class="tooltip">linkedin</a>
+                  <a><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li class="icon instagram">
+                  <a class="tooltip">Instagram</a>
+                  <a><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="icon github">
+                  <a class="tooltip">Github</a>
+                  <a><i class="fab fa-github"></i></a>
+                </li>
+                <li class="icon Gmail ">
+                  <a class="tooltip">Gmail</a>
+                  <a><i class="fas fa-envelope"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <form>
+              <div class="form-item">
+                <input type="text" name="sender" required>
+                <label>Name:</label>
+              </div>
+              <div class="form-item">
+                <input type="text" name="email" required>
+                <label>Email:</label>
+              </div>
+              <div class="form-item">
+                <textarea class="" name="message" required></textarea>
+                <label>Message:</label>
+              </div>
+              <button class="submit-btn">Send</button>  
+            </form>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
